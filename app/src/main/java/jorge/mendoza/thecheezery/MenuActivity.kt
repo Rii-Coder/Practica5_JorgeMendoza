@@ -10,11 +10,61 @@ class MenuActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
 
-        val button:Button = findViewById(R.id.button_get_started) as Button
+        var type: String
 
-        button.setOnClickListener(){
-            var intent:Intent = Intent(this, RegisterActivity::class.java)
+        var btnCold: Button = findViewById(R.id.button_cold_drinks) as Button
+
+        var btnHot: Button = findViewById(R.id.button_hot_drinks) as Button
+
+        var btnSalty: Button = findViewById(R.id.button_salties) as Button
+
+        var btnSweet: Button = findViewById(R.id.button_sweets) as Button
+
+        var btnCombos: Button = findViewById(R.id.button_combos) as Button
+
+        var btnCustom: Button = findViewById(R.id.button_custom) as Button
+
+        btnCold.setOnClickListener{
+            type = "cold"
+            var intent: Intent = Intent(this,ProductsActivity::class.java)
+            intent.putExtra("type", type)
             startActivity(intent)
         }
+
+        btnHot.setOnClickListener{
+            type = "hot"
+            var intent: Intent = Intent(this,ProductsActivity::class.java)
+            intent.putExtra("type", type)
+            startActivity(intent)
+        }
+
+        btnSalty.setOnClickListener{
+            type = "salty"
+            var intent: Intent = Intent(this,ProductsActivity::class.java)
+            intent.putExtra("type", type)
+            startActivity(intent)
+        }
+
+        btnSweet.setOnClickListener{
+            type = "sweet"
+            var intent: Intent = Intent(this,ProductsActivity::class.java)
+            intent.putExtra("type", type)
+            startActivity(intent)
+        }
+
+        btnCombos.setOnClickListener{
+            type = "combo"
+            var intent: Intent = Intent(this,ProductsActivity::class.java)
+            intent.putExtra("type", type)
+            startActivity(intent)
+        }
+
+        btnCustom.setOnClickListener{
+            type = "custom"
+            var intent: Intent = Intent(this,ProductsActivity::class.java)
+            intent.putExtra("type", type)
+            startActivity(intent)
+        }
+
     }
 }
